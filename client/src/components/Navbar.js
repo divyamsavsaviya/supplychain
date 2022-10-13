@@ -109,18 +109,20 @@ export default function PersistentDrawerLeft({ pageTitle,navItems, children }) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            style={{ display: "flex", alignItems: "center" }}
-          >
-            <img
-              alt="."
-              src="/logo.png"
-              style={{ height: "45px", width: "auto" }}
-            />
-            &nbsp;SupplyChain-Dapp
-          </Typography>
+          <Link to="/" style={{ textDecoration: "none", color: "#fff" }}>
+            <Typography
+              variant="h6"
+              noWrap
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              <img
+                alt="."
+                src="/logo.png"
+                style={{ height: "45px", width: "auto" }}
+              />
+              &nbsp;SupplyChain-Dapp
+            </Typography>
+          </Link>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -133,7 +135,7 @@ export default function PersistentDrawerLeft({ pageTitle,navItems, children }) {
         }}
       >
         <div className={classes.drawerHeader}>
-        <ListItemText><b>{pageTitle}</b></ListItemText>
+          <ListItemText><b>{pageTitle}</b></ListItemText>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "ltr" ? (
               <ChevronLeftIcon style={{ color: "#fff" }} />
